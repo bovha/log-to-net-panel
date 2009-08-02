@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>logtonetpanel@duynstee.com</em:id>
+    <em:version>0.2</em:version>
+   
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.5</em:minVersion>
+        <em:maxVersion>3.5.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:name>Log to NetPanel</em:name>
+    <em:description>Firebug extension that allows you to log from javascript into the NET panel of Firebug</em:description>
+    <em:creator>Teun Duynstee</em:creator>
+    <em:homepageURL>http://www.teuntostring.net/blog/</em:homepageURL>
+    <em:iconURL>chrome://logtonetpanel/content/logtonetpanel.png</em:iconURL>
+  </Description>      
+</RDF>

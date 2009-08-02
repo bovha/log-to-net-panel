@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="ZipFilesAndRename" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="MSBuild.Community.Tasks.Zip" AssemblyFile="MSBuild.Community.Tasks.dll" />
+  
+   <ItemGroup>  
+     <DefaultExclude Include="**\.svn\**" />  
+     <DefaultExclude Include="**\bin\**" />  
+     <DefaultExclude Include="**\obj\**" />  
+     <DefaultExclude Include="**\*.proj" />  
+     <DefaultExclude Include="**\*.bat" />  
+     <DefaultExclude Include="**\*.dll" />  
+     <DefaultExclude Include="**\*.zip" />  
+     <DefaultExclude Include="**\*.xpi" />  
+     <DefaultExclude Include="*.htm" />  
+   </ItemGroup>  
+
+  <ItemGroup>  
+     <ZipFiles Include="**\*.*" Exclude="@(DefaultExclude)" />  
+  </ItemGroup>  
+
+  <Target Name="ZipFilesAndRename" >
+    <!--<SvnInfo LocalPath="$(MSBuildProjectDirectory)" ToolPath="C:\Program Files\svn-win32-1.4.6\bin">
+      <Output TaskParameter="Revision" PropertyName="LastRevision" />
+    </SvnInfo>-->
+    <Delete Files=".\logtonetpanel.xpi"/>
+    <Zip Files="@(ZipFiles)"
+         ZipFileName=".\logtonetpanel.xpi" />
+  </Target>
+</Project>
