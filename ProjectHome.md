@@ -1,0 +1,3 @@
+Log to Netpanel allows you to add markers to the Net panel from javascript. They appear as extra bars below the network downloads. That way, you can find out at what point in the download sequence specific javascript code is running. If you log twice with the same name, a bar will appear from the first to the second point in time.
+
+For the initial announcement and a tutorial, [check here](http://www.teuntostring.net/blog/2009/07/announcing-log-to-netpanel.html).
